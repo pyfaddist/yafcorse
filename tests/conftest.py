@@ -1,19 +1,15 @@
-# Yet Another Flask CORS Extension
-
-```bash
-pip install yafcorse
-```
-
-```python
+import pytest
 from flask import Flask
 
 from yafcorse import Yafcorse
 
-def create_app():
+
+@pytest.fixture()
+def app():
     app = Flask(__name__)
 
     cors = Yafcorse({
-        'origins': lambda origin: origin == 'https://api.your-domain.space',
+        'origins': '*',
         'allowed_methods': ['GET', 'POST', 'PUT'],
         'allowed_headers': ['Content-Type', 'X-Test-Header'],
         'allow_credentials': True,
@@ -22,4 +18,8 @@ def create_app():
     cors.init_app(app)
 
     return app
-```
+
+
+@pytest.fixture()
+def client(app: Flask):
+    return app.test_client()
