@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: yafcorse
-Version: 1.0
+Version: 1.0.0
 Summary: Yet Another Flask CORS Extension.
 Home-page: https://github.com/pyfaddist/yafcorse
 Author: Christian Dein
