@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='yafcorse',
-    version='1.0.0',
+    version='1.0.1',
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     url='https://github.com/pyfaddist/yafcorse',
