@@ -13,4 +13,6 @@ pytest = "*"
 python_version = "3.9"
 
 [scripts]
+build = 'python setup.py sdist bdist_wheel'
+deploy = 'twine upload dist/*'
 test = 'pytest'
